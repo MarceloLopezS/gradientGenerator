@@ -6,30 +6,26 @@ const currentCSS = document.getElementById("currentCSS");
 const formatToggler = document.getElementById("toggleFormat");
 let rgbFormat = true;
 
-function rgbToHex(r, g, b) {
-    return "#" + 
+const rgbToHex = (r, g, b) => "#" + 
     ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-}
-function setBodyBackground(color1, color2) {
+const setBodyBackground = (color1, color2) => {
     body.style.background = "linear-gradient(to right bottom, "+ 
     color1 +", "+ color2 +")";
     currentCSS.textContent = body.style.background + ";";
 }
-function setGradient() {
-    setBodyBackground(color1.value, color2.value);
-}
-function randomizeColor() {
+const setGradient = () => setBodyBackground(color1.value, color2.value);
+const randomizeColor = () => {
     let color = rgbToHex(Math.floor(Math.random()*255), 
     Math.floor(Math.random()*255), 
     Math.floor(Math.random()*255));
     return color;
 }
-function randomizeGradient() {
+const randomizeGradient = () => {
     color1.value = randomizeColor();
     color2.value = randomizeColor();
     setGradient();
 }
-function toggleFormat() {
+const toggleFormat = () => {
     if(rgbFormat) {
         currentCSS.textContent = "linear-gradient(to right bottom, "+ 
         color1.value +", "+ color2.value +")";
