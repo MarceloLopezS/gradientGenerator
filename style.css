@@ -23,13 +23,19 @@ button {
 button:hover, input[type=color]:hover {
     background-color: #e6e2da3f;
 }
+h2 + div {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
 .container {
     width: 100%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 5% 10px 0 10px;
 }
 #color1, #color2 {
     border-radius: 5px;
@@ -44,4 +50,26 @@ button:hover, input[type=color]:hover {
 #toggleFormat {
     padding: 10px;
     margin-left: 10px;
+}
+@media (max-width: 630px){
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    #currentCSS {
+        font-size: 0.85em;
+    }
+}
+@media (max-width: 500px){
+    h1 {
+        font-size: 1.2em;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    #currentCSS {
+        font-size: 0.7em;
+    }
 }
