@@ -23,6 +23,8 @@ const randomizeColor = () => {
 const randomizeGradient = () => {
     color1.value = randomizeColor();
     color2.value = randomizeColor();
+    rgbFormat = false;
+    toggleFormat();
     setGradient();
 }
 const toggleFormat = () => {
