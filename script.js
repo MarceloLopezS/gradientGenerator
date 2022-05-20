@@ -47,7 +47,7 @@ const randomizeGradient = () => {
 const toggleFormat = () => {
     if(rgbFormat) {
         currentCSS.textContent = "linear-gradient(to right bottom, "+ 
-        color1.value +", "+ color2.value +")";
+        color1.value +", "+ color2.value +");";
         formatToggler.textContent = "RGB";
         rgbFormat = false;
     }else {
