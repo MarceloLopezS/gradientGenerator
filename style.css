@@ -23,6 +23,20 @@ button {
 button:hover, input[type=color]:hover {
     background-color: #e6e2da3f;
 }
+p + div {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 250,
+  'GRAD' 0,
+  'opsz' 48
+}
 .container {
     width: 100%;
     display: flex;
@@ -36,14 +50,37 @@ button:hover, input[type=color]:hover {
     cursor: pointer;
 }
 #randomizer {
-    margin-top: 15px;
+    margin: 15px 0 10px 0;
 }
-#currentCSS {
-    display: inline;
+#copyToClipboard {
+    padding: 4px 6px;
+    margin-left: 10px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+}
+.tooltip .tooltiptext {
+    width: 80px;
+    background-color: #e6e2da67;
+    color: #e6e2da;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -100%;
+    left: 62%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.2s;
 }
 #toggleFormat {
     padding: 10px;
-    margin-left: 10px;
 }
 @media (max-width: 630px){
     h1 {
