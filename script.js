@@ -28,7 +28,7 @@ const rgbToHex = (r, g, b) => "#" +
 const setBodyBackground = (color1, color2) => {
     body.style.background = "linear-gradient(to right bottom, "+ 
     color1 +", "+ color2 +")";
-    currentCSS.textContent = body.style.background + ";";
+    currentCSS.textContent = body.style.background;
 }
 const setGradient = () => setBodyBackground(color1.value, color2.value);
 const randomizeColor = () => {
@@ -47,11 +47,11 @@ const randomizeGradient = () => {
 const toggleFormat = () => {
     if(rgbFormat) {
         currentCSS.textContent = "linear-gradient(to right bottom, "+ 
-        color1.value +", "+ color2.value +");";
+        color1.value +", "+ color2.value +")";
         formatToggler.textContent = "RGB";
         rgbFormat = false;
     }else {
-        currentCSS.textContent = body.style.background + ";";
+        currentCSS.textContent = body.style.background;
         formatToggler.textContent = "Hex";
         rgbFormat = true;
     }
