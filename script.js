@@ -2,14 +2,14 @@ const body = document.querySelector("body");
 const color1 = document.getElementById("color1");
 const color2 = document.getElementById("color2");
 const randomizer = document.getElementById("randomizer");
-const currentCSS = document.getElementById("currentCSS");
-const copyToClipboard = document.getElementById("copyToClipboard");
+const currentCSS = document.getElementById("current-CSS");
+const copyToClipboard = document.getElementById("copy-to-clipboard");
 const tooltip = document.querySelectorAll(".tooltip, .tooltiptext");
-const formatToggler = document.getElementById("toggleFormat");
+const formatToggler = document.getElementById("toggle-format");
 let rgbFormat = true;
 
 const copyGradientToClipboard = () => {
-    const formatedGradient = document.getElementById("currentCSS");
+    const formatedGradient = document.getElementById("current-CSS");
     navigator.clipboard.writeText(formatedGradient.textContent);
     const cicleTooltip = () => {
         for (item of tooltip) {

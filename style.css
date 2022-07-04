@@ -1,6 +1,6 @@
 :root {
-    --clr-neutral--300: #cacaca;
-    --clr-neutral--200: #d8d8d8;
+    --clr-neutral-300: #cacaca;
+    --clr-neutral-200: #d8d8d8;
     --clr-neutral-50: #e6e2da;
 }
 * {
@@ -29,53 +29,50 @@ main {
     place-items: center;
     margin: 1.8rem 1rem;
 }
-button, input[type=color] {
-    background: transparent;
-    border: 0.2em var(--clr-neutral-50) solid;
-    color: var(--clr-neutral-50);
-}
-button {
-    outline: none;
-    cursor: pointer;
-    padding: 0.8em;
-    border-radius: 0.45em;
-}
-button:hover, input[type=color]:hover {
-    background-color: rgba(230, 226, 218, 0.247);
-}
 code {
     padding-block: 1em;
-}
-code + div {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0.6rem;
 }
 footer {
     max-width: 100vw;
     font-size: clamp(0.7rem, 1vw, 0.85rem);
     display: grid;
     justify-items: center;
-    color: var(--clr-neutral--200);
+    color: var(--clr-neutral-200);
     background: rgba(0, 0, 0, 0.3);
     margin-top: auto;
 }
-footer a {
-    color: var(--clr-neutral--200);
+.btn, .color-input {
+    background: transparent;
+    border: 0.2em var(--clr-neutral-50) solid;
+    color: var(--clr-neutral-50);
 }
-footer a:hover, footer a:active {
-    color: var(--clr-neutral--300);
+.btn {
+    outline: none;
+    cursor: pointer;
+    padding: 0.8em;
+    border-radius: 0.45em;
 }
-#color1, #color2 {
+.btn:hover, .color-input:hover {
+    background-color: rgba(230, 226, 218, 0.247);
+}
+.color-input {
     border-radius: 0.45em;
     cursor: pointer;
 }
 #randomizer {
     margin: 1rem 0 0.6rem 0;
 }
-#copyToClipboard {
+.btn-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.6rem;
+}
+#toggle-format {
+    padding: 0.75em;
+}
+#copy-to-clipboard {
     padding: 0.57em 0.6em;
     margin-left: 0.5rem;
 }
@@ -101,10 +98,7 @@ footer a:hover, footer a:active {
     opacity: 0;
     transition: opacity 0.2s;
 }
-#toggleFormat {
-    padding: 0.75em;
-}
-.contactInfo {
+.contact-info {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -112,10 +106,14 @@ footer a:hover, footer a:active {
     gap: 1.5em;
     margin: 0.8rem 1.5rem;
 }
-.contactInfo > a {
+.contact-info__link {
+    color: var(--clr-neutral-200);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 0.25em;
+}
+.contact-info__link:hover, .contact-info__link:active {
+    color: var(--clr-neutral-300);
 }
